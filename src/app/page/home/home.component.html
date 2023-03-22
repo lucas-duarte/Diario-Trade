@@ -1,159 +1,71 @@
-<form class="example-form">
+<div class="container text-center">
 
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker">
-    <mat-hint>MM/DD/YYYY</mat-hint>
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
+  <div class="row align-items-center mt-5">
+    <div class="col-3">
+      <input type="date" class="form-control" placeholder="Choose a date" aria-label="Choose a date">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Ativo" aria-label="Ativo">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Setup" aria-label="Setup">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Trigger" aria-label="Trigger">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Direção da MM20" aria-label="Direção da MM20">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Direção da MM200" aria-label="Direção da MM200">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Alinhamento da MMS" aria-label="Alinhamento da MMS">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Distancia da VH/MM20" aria-label="Distancia da VH/MM20">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="TZ" aria-label="TZ">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Tipo de Entrada" aria-label="Tipo de Entrada">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Horario" aria-label="Horario">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Entrada" aria-label="Entrada">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Stop" aria-label="Stop">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Tipo Stop" aria-label="Tipo Stop">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Alvo" aria-label="Alvo">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Saida Parcial 1" aria-label="Saida Parcial 1">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Saida Parcial 2" aria-label="Saida Parcial 2">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Trailing Stop Final" aria-label="Trailing Stop Final">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Final" aria-label="Final">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Anotações" aria-label="Anotações">
+    </div>
+  </div>
 
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Ativo</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
+  <div class="d-grid gap-2 col-4 mx-auto mt-4">
+    <button class="btn btn-primary" type="button">Button</button>
+  </div>
 
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Setup</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Trigger</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Direção da MM20</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Direção da MM200</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Alinhamento da MMS</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Distancia da VH/MM20</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>TZ</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Tipo de Entrada</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>horario</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Entrada</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Stop</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Tipo Stop</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Alvo</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Saida Parcial 1</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Saida Parcial 2</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Trailing Stop Final</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Final</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill" class="field-full-width">
-    <mat-label>Anotações</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
-</form>
+  <app-table-trades></app-table-trades>
+</div>
