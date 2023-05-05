@@ -1,71 +1,29 @@
 <div class="container text-center">
 
-  <div class="row align-items-center mt-5">
-    <div class="col-3">
-      <input type="date" class="form-control" placeholder="Choose a date" aria-label="Choose a date">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Ativo" aria-label="Ativo">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Setup" aria-label="Setup">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Trigger" aria-label="Trigger">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Direção da MM20" aria-label="Direção da MM20">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Direção da MM200" aria-label="Direção da MM200">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Alinhamento da MMS" aria-label="Alinhamento da MMS">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Distancia da VH/MM20" aria-label="Distancia da VH/MM20">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="TZ" aria-label="TZ">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Tipo de Entrada" aria-label="Tipo de Entrada">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Horario" aria-label="Horario">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Entrada" aria-label="Entrada">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Stop" aria-label="Stop">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Tipo Stop" aria-label="Tipo Stop">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Alvo" aria-label="Alvo">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Saida Parcial 1" aria-label="Saida Parcial 1">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Saida Parcial 2" aria-label="Saida Parcial 2">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Trailing Stop Final" aria-label="Trailing Stop Final">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Final" aria-label="Final">
-    </div>
-    <div class="col-3">
-      <input type="text" class="form-control" placeholder="Anotações" aria-label="Anotações">
-    </div>
-  </div>
-
-  <div class="d-grid gap-2 col-4 mx-auto mt-4">
-    <button class="btn btn-primary" type="button">Button</button>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Exchange</th>
+        <th>Currency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stock of stocks">
+        <td>{{ stock.symbol }}</td>
+        <td>{{ stock.name }}</td>
+        <td>{{ stock.exchange }}</td>
+        <td>{{ stock.currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Registrar Trade
+  </button>
+  
+  <app-modal-register-trade></app-modal-register-trade>
 
   <app-table-trades></app-table-trades>
 </div>

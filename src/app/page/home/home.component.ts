@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   hide = true;
+  stocks: any[] = [];
+
+  constructor() {}
+
+  ngOnInit(): void {
+  
+  }
+
 }

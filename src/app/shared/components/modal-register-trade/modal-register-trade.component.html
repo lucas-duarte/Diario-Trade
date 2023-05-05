@@ -1,0 +1,102 @@
+<!-- Modal -->
+<div class="container text-center">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form [formGroup]="formRegisterTrade" (ngSubmit)="onSubmit()">
+                    <div class="modal-body">
+                        <div class="row align-items-center mt-5">
+                            <div class="col-3">
+                                <input type="date" class="form-control" placeholder="Choose a date" formControlName="dateOperation" aria-label="Choose a date">
+                            </div>
+                            <div class="col-3">
+                                <select class="form-select" aria-label="Ativos" placeholder="Selecione um Ativo" (change)="onAtivoSelect($event)">
+                                    <option value="1">WDO</option>
+                                    <option value="2">WIN</option>
+                                </select>
+                            </div>
+                            <div class="col-3">
+                                <select class="form-select" aria-label="Setup" placeholder="Selecione um setup">
+                                    <option disabled selected value="">Selecione um setup</option>
+                                    <option *ngFor="let setup of setups" [value]="setup.id">{{ setup.nomeSetup }}</option>
+                                  </select>
+                            </div>
+                            <div class="col-3">
+                                <select class="form-select" aria-label="Triggers" placeholder="Selecione uma trigger">
+                                    <option disabled selected value="">Selecione uma trigger</option>
+                                    <option *ngFor="let trigger of triggers" [value]="trigger.id">{{trigger.nome}}</option>
+                                  </select>
+                            </div>
+                            <div class="col-3">
+                                <select class="form-select" aria-label="Direção da MM20" placeholder="Direção da MM20">
+                                    <option disabled selected value="">Selecione uma trigger</option>
+                                    <option *ngFor="let trigger of triggers" [value]="trigger.id">{{trigger.nome}}</option>
+                                </select>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Direção da MM200"
+                                    aria-label="Direção da MM200">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Alinhamento da MMS"
+                                    aria-label="Alinhamento da MMS">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Distancia da VH/MM20"
+                                    aria-label="Distancia da VH/MM20">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="TZ" aria-label="TZ">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Tipo de Entrada"
+                                    aria-label="Tipo de Entrada">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Horario" formControlName="hours" aria-label="Horario">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Entrada" aria-label="Entrada">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Stop" aria-label="Stop">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Tipo Stop" aria-label="Tipo Stop">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Alvo" aria-label="Alvo">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Saida Parcial 1"
+                                    aria-label="Saida Parcial 1">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Saida Parcial 2"
+                                    aria-label="Saida Parcial 2">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Trailing Stop Final"
+                                    aria-label="Trailing Stop Final">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Final" aria-label="Final">
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Anotações" aria-label="Anotações">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" type="submit">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

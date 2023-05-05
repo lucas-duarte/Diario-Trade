@@ -2,18 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TableTradesComponent } from './table-trades/table-trades.component';
-
+import { ModalRegisterTradeComponent } from './modal-register-trade/modal-register-trade.component';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 @NgModule({
   declarations: [
     ToolbarComponent,
-    TableTradesComponent
+    TableTradesComponent,
+    ModalRegisterTradeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule     
   ],
   exports: [
     ToolbarComponent, 
-    TableTradesComponent
+    TableTradesComponent,
+    ModalRegisterTradeComponent
   ]
 })
 export class ComponentsModule { }
